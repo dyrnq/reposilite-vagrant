@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+
+
+    <servers>
+        <server>
+            <id>privite</id>
+            <username>admin</username>
+            <password>pass</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>alwaysActiveProfile</id>
+            <repositories>
+                <repository>
+                    <id>privite</id>
+                    <url>http://192.168.111.10:18080/privite</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+        </profile>
+
+    </profiles>
+
+
+    <activeProfiles>
+        <activeProfile>alwaysActiveProfile</activeProfile>
+        <!-- <activeProfile>anotherAlwaysActiveProfile</activeProfile> -->
+    </activeProfiles>
+
+
+    <mirrors>
+        <mirror>
+            <id>nexus-tencentyun</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Nexus tencentyun</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+
+</settings>
