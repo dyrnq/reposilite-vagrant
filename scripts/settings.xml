@@ -11,6 +11,18 @@
             <username>admin</username>
             <password>pass</password>
         </server>
+
+        <server>
+            <id>reposilite-releases</id>
+            <username>admin</username>
+            <password>pass</password>
+        </server>
+        <server>
+            <id>reposilite-snapshots</id>
+            <username>admin</username>
+            <password>pass</password>
+        </server>
+
     </servers>
 
     <profiles>
@@ -50,18 +62,18 @@
 
 
     <mirrors>
-        <!-- <mirror>
+        <mirror>
             <id>central-mirror</id>
             <mirrorOf>central</mirrorOf>
             <name>阿里云公共仓库</name>
             <url>https://maven.aliyun.com/repository/public</url>
-        </mirror> -->
-        <mirror>
+        </mirror>
+        <!-- <mirror>
             <id>central-mirror</id>
             <mirrorOf>central</mirrorOf>
             <name>Nexus tencentyun</name>
             <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
-        </mirror>
+        </mirror> -->
         <!-- <mirror>
             <id>central-mirror</id>
             <mirrorOf>central</mirrorOf>
