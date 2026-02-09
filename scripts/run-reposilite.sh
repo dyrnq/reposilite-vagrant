@@ -59,3 +59,10 @@ docker run \
 -e REPOSILITE_OPTS="--disable-it" \
 -e REPOSILITE_LOCAL_DATABASE="mysql mysql84:3306 reposilite root 666666" \
 dzikoysk/reposilite:3.5.26
+
+
+sleep 10s
+(
+curl -fsSL -X GET http://127.0.0.1:18080/api/settings/domains -H "Authorization: Basic $(echo -n admin:pass | base64)" | jq
+curl -fsSL -X GET http://127.0.0.1:18080/api/settings/domain/maven -H "Authorization: Basic $(echo -n admin:pass | base64)" | jq
+)
