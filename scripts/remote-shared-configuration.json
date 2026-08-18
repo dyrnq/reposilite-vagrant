@@ -68,6 +68,23 @@
                 "storagePolicy": "PRIORITIZE_UPSTREAM_METADATA",
                 "metadataMaxAge": 0,
                 "proxied": []
+            },
+            {
+                "id": "s3",
+                "visibility": "PUBLIC",
+                "redeployment": true,
+                "preserveSnapshots": true,
+                "storageProvider": {
+                    "type": "s3",
+                    "bucketName": "reposilite",
+                    "endpoint": "http://192.168.111.10:9000",
+                    "accessKey": "accessKey",
+                    "secretKey": "secretKey",
+                    "region": ""
+                },
+                "storagePolicy": "PRIORITIZE_UPSTREAM_METADATA",
+                "metadataMaxAge": 0,
+                "proxied": []
             }
         ]
     },
