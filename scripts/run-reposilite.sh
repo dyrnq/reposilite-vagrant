@@ -2,6 +2,7 @@
 
 wait4x_image="${wait4x_image:-atkrad/wait4x:3.6.0}"
 adminer_image="${adminer_image:-adminer:5.4.1}"
+reposilite_image="${reposilite_image:-dzikoysk/reposilite:3.6.2}"
 
 
 docker network inspect mynet &>/dev/null || docker network create --subnet 172.18.0.0/16 --gateway 172.18.0.1 --driver bridge mynet
@@ -36,7 +37,7 @@ docker run \
 -e JAVA_OPTS='-Xmx512M' \
 -e REPOSILITE_OPTS="--token name:secret --disable-it" \
 -e REPOSILITE_LOCAL_DATABASE="mysql mysql84:3306 reposilite root 666666" \
-dzikoysk/reposilite:3.5.26
+${reposilite_image}
 
 sleep 10s;
 
@@ -58,7 +59,7 @@ docker run \
 -e JAVA_OPTS='-Xmx512M' \
 -e REPOSILITE_OPTS="--disable-it" \
 -e REPOSILITE_LOCAL_DATABASE="mysql mysql84:3306 reposilite root 666666" \
-dzikoysk/reposilite:3.5.26
+${reposilite_image}
 
 
 sleep 10s
